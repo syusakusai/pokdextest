@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<app-body-section></app-body-section>
+	<div>
+				<footer class="footer-box">
+					<div class="inside-footer">
+						<h5>&#169; 2019 Wahyu Fitrahirobbi suit. All rights reserved.</h5>
+					</div>
+				</footer>
+			</div>
+
+
+  <div id="banner" [ngStyle] = "{'transition': trans, 'opacity' : opcai}"
+  	[ngClass]= "scroll > ok ? 'newsletter-box display-block' : fixed ?  'newsletter-box display-block fixed' : 'newsletter-box disappear'"
+  	  	>
+            <div>
+                <h6 class="h6-box">
+                    <a (click)="this.handleClick($event)" style="color: 'white'">
+                        X
+                    </a>
+                </h6>
+                <h2>Get latest updates in web technologies</h2>
+                <h5>
+                    I write articles related to web technologies, such as design trends, development tools,
+                    UI/UX case studies and reviews, and more. Sign up to my newsletter to get them all.
+                </h5>
+                <form class="form-input-box">
+                    <input class="input" type="email" name="email" placeholder="Email address" />
+                    <button class="button-submit" type="submit">
+                        Count me in!
+                    </button>
+                </form>
+            </div>
+        </div>
+    <!-- </div> -->

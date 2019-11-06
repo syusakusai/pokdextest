@@ -1,0 +1,162 @@
+.img-work-desk {
+	background-image: url('../../assets/work-desk__dustin-lee.jpg');
+	height: calc(100vw * 0.390);
+	background-size: cover;
+	position: relative;
+	-webkit-filter: contrast(1.65);
+	filter: contrast(1.55);
+}
+
+.displaN {
+	display: none;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+}
+
+.navbar-box.fixed-nav {
+	position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.layer {
+	background-color: #004a75;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.margin-top-hide-promo {
+	margin-top: -64px;
+}
+
+.button-contact {
+	background-color: #004a75;
+	border: 1px solid white;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	opacity: 0.9;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.button-contact:hover {
+	background: white;
+	color: #004a75;
+}
+
+.logo-header {
+	background-image: url('../../assets/y-logo-white.png');
+	height: 50px;
+	width: 50px;
+	background-size: cover;
+}
+.item {
+	align-self: flex-start;
+}
+
+.navbar-box {
+	height: auto;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	padding: 5px;
+	flex-wrap: wrap;
+	background: #e5e5e5;
+}
+.button {
+	background-color: #004a75;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.p {
+	font-size: 12px;
+}
+
+#navbar-header {
+	transform: translateY(-150px);
+	transition: transform 400ms ease-in;
+}
+
+#navbar-header.slideInHeader {
+	transform: translateY(0);
+}
+
+#navbar-header.slideOutHeader {
+    transform: translateY(-4.5rem);
+}
+
+.slideIn {
+	transform: translateY(0);
+	transition: transform 400ms ease-in;
+}
+
+.slideOut {
+	transform: translateY(-110%);
+    transition: transform 400ms ease-in;
+}
+
+@media all and (max-width: 767px) {
+	.navbar-box {
+		justify-content: flex-start;
+	}
+	#navbar-header {
+		justify-content: flex-start;
+	}
+	.img-work-desk {
+		height: calc(100vw);}
+
+		.fixed-nav {
+			    display: contents !important;
+
+		}
+
+
+
+	#navbar-header.slideOutHeader {
+		transform: translateY(-26%);
+	}
+
+	.p {
+		height: 45px;
+		margin: 0px 5px 5px 5px;
+		font-size: 11px;
+	}
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    #navbar-header.slideOutHeader {
+		transform: translateY(-3%);
+	}
+}
