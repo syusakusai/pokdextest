@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 import { HostListener, Inject } from "@angular/core";
 import { DOCUMENT } from '@angular/platform-browser';
 
@@ -18,7 +18,12 @@ export class AppComponent {
   fixed = false;
   opak = true;
   // oketop;
-  @HostListener("window:scroll", [])
+  @HostListener("window:scroll", ['$event'])
+  onDocumentRemoteEvent(ev: any) {
+    // handle the event here
+    this.handleScroll()
+}
+
 
     ngAfterViewInit() {
 const el = document.getElementById('banner');
@@ -31,7 +36,7 @@ const el = document.getElementById('banner');
   this.scroll = window.scrollY;
   // console.log('ini > ',oketop > this.scroll)
 
-  window.addEventListener('scroll', this.handleScroll());
+  // window.addEventListener('scroll', this.handleScroll());
 
 }
 
@@ -56,9 +61,6 @@ const el = document.getElementById('banner');
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number > 500) {
     	this.ScrollTF = true;
-    	
-    	console.log('ini'this.scroll > this.ok)
-
       console.log('You are 500px from the top to bottom');
     } else if (number > 1000) {
         console.log('You are 1000px from the top to bottom');
@@ -67,21 +69,20 @@ const el = document.getElementById('banner');
   }
 
   	handleClick(e) {
-        e.preventDefault()
         this.opak = false;
 
-        let shand = document.getElementById('banner') as HTMLCollectionOf<HTMLElement>;
+        let shand = document.getElementById('banner');
 
-        if (shand.length !== 0 || this.opak === false;) {
+        if (this.opak === false) {
         	shand.style.opacity = "0";
         	// document.getElementById("banner").style.opacity = "0";
 
         }
-            console.log('test', shand.length > 1 || !this.opak);
+            // console.log('test', shand.length > 1 || !this.opak);
             console.log('shand',shand)
 
             console.log('opak',this.opak)
-        this.opcai:0;
+        this.opcai = 0;
 		// this.setState((prev) => ({ opacity: 0 }));
 	}
 

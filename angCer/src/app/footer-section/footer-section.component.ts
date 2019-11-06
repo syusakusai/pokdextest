@@ -17,13 +17,6 @@ kadal = ''
  	
 
   }
-
-  ngAfterViewInit() {
-  this.divStyle = 'all 1s ease-out'; 
-  window.addEventListener('scroll', this.handleScroll);
-
-}
-
 	
 
 
