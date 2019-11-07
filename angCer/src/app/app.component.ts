@@ -43,6 +43,9 @@ const el = document.getElementById('banner');
 	handleScroll() {
 		// console.log('test')
         if(window.pageYOffset > 450 && window.pageYOffset < 1500) {
+        	console.log('true or false', window.pageYOffset > 450 && window.pageYOffset < 1500)
+
+        	console.log('window.pageYOffset', window.pageYOffset)
         	this.scroll = window.scrollX;
         	this.fixed = true;
 

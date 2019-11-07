@@ -115,6 +115,10 @@
     .form-input-box{
         flex-flow: wrap;
     }
+    .padding-in-mobile {
+        /*padding: */
+        padding: 9%
+    }
     .button-submit{
         width: 100%;
         padding: 10px 20px;
